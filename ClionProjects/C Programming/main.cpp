@@ -12,10 +12,10 @@ int main() {
     //calculate area of the circle
     circle_area = pi * circle_radius * circle_radius;
     printf("The area of the circle is: %f \n", circle_area);
-    //calculate area of square containing circle
+    //calculate area of the square containing circle
     square_area = (2 * circle_radius) * (2 * circle_radius);
     printf("The area of the square is: %d \n", square_area);
-    //calculate difference
+    //calculate the difference
     difference_area = square_area - circle_area;
     printf("The difference is: %f \n", difference_area);
     return 0;

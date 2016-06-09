@@ -5,9 +5,13 @@
 #include <iostream>
 #include <cmath>
 
-using namespace std;
+using std::cout;
+using std::cin;
+using std::endl;
+//using namespace std;
 
-double function1(int x1, int x2, int y1, int y2);
+/*
+ double function1(int x1, int x2, int y1, int y2);
 
 double function2(int x1, int x3, int y1, int y3);
 
@@ -54,3 +58,39 @@ double function3(int x2, int x3, int y2, int y3) {
     distance3 = sqrt((x3 - x2) * (x3 - x2) + (y3 - y2) * (y3 - y2));
     return distance3;
 };
+*/
+
+
+double function(int x1, int x2, int y1, int y2) {
+    double distance = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+
+    return distance;
+};
+
+void print_distance(int x1, int x2, int y1, int y2, int x3, int y3) {
+    cout << "The distance between Points 1 and 2 is: " << function(x2, x1, y2, y1) << endl;
+    cout << "The distance between Points 1 and 3 is: " << function(x3, x1, y3, y1) << endl;
+    cout << "The distance between Points 2 and 3 is: " << function(x3, x2, y3, y2) << endl;
+};
+
+int main() {
+
+    //first point
+    cout << "Enter two integers as the coordinates for the first point:" << endl;
+    int x1, y1;
+    cin >> x1 >> y1;
+    //second point
+    cout << "Enter two integers as the coordinates for the second point:" << endl;
+    int x2, y2;
+    cin >> x2 >> y2;
+    //third point
+    int x3, y3;
+    cout << "Enter two integers as the coordinates for the third point:" << endl;
+    cin >> x3 >> y3;
+
+    print_distance(x1, x2, y1, y2, x3, y3);
+    return 0;
+};
+
+
+
